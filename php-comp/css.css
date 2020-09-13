@@ -1,0 +1,21 @@
+#entradaTexto, #pantalla {
+    border: 10px solid #f1f1f1 !important;
+    border-radius: 15px;
+    padding: 20px;
+    height: 500px;
+    background-color: white;
+}
+body {
+    background-color: #D8BFD8;
+}
+.s2>div {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#entradaTexto {
+    resize: none
+}
+.s2 {
+    height: 500px;
+}
