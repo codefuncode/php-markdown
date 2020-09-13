@@ -7,12 +7,14 @@
     <link href="css.css" rel="stylesheet" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
     </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+    </script>
     <title>
       Document
     </title>
   </head>
   <body>
-    <?php require 'php.php';?>
+    <?php require __DIR__ . '/vendor/autoload.php';?>
     <div class="w3-bar w3-light-grey" style="margin-bottom: 20px;">
       <a class="w3-bar-item w3-button" href="#">
         Editor Markdown
@@ -21,8 +23,8 @@
         <button class="w3-button">
           Menu
         </button>
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a class="w3-bar-item w3-button" href="#">
+        <div class="w3-dropdown-content w3-bar-block w3-card-4" id="menu">
+          <a class="w3-bar-item w3-button" href="#" id="nuevo">
             Nuevo
           </a>
           <a class="w3-bar-item w3-button" href="#">

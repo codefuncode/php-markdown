@@ -1,14 +1,20 @@
 jQuery(document).ready(function($) {
 
+    // ==============================================
+    //  Variables 
     var
         entradaTexto =
         document.querySelectorAll('.entradaTexto'),
-
         pantalla =
-        document.getElementById('pantalla')
-    ficheros =
-        document.getElementById('ficheros');
+        document.getElementById('pantalla'),
+        ficheros =
+        document.getElementById('ficheros'),
+        nuevo =
+        document.getElementById('nuevo');
+    // ==============================================
 
+    // ==============================================
+    //  Estado inicial
     entradaTexto[0].value = '';
 
     console.log(entradaTexto[0]);
@@ -35,7 +41,8 @@ jQuery(document).ready(function($) {
             }
             ficheros.innerHTML = cadena;
         });
-
+    // ==============================================
+    //  Conversion a markdown peticion al servidor
     entradaTexto[0].addEventListener('input', function(argument) {
         var cadena = {
             texto: entradaTexto[0].value
@@ -50,5 +57,31 @@ jQuery(document).ready(function($) {
 
             });
     });
+
+    function crearfichero(argument) {
+        var div = document.createElement("div");
+        var slider = document.createElement("input");
+
+        slider.type = "text";
+        slider.height = "100%";
+
+        div.appendChild(slider);
+        swal({
+            content: div,
+            buttons: ["Cancelar", "Aceptar"],
+
+        });
+
+        var botones = document.querySelectorAll('.swal-modal button');
+        for (var i = 0; i < botones.length; i++) {
+            console.log(botones[i]);
+        }
+
+        botones[1].addEventListener("click", function(argument) {
+            console.log(slider.value);
+        });
+    }
+
+    nuevo.addEventListener("click", crearfichero);
 
 });

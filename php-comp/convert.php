@@ -1,5 +1,5 @@
 <?php
-include_once "php.php";
+require __DIR__ . '/vendor/autoload.php';
 
 use Michelf\Markdown;
 
