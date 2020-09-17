@@ -6,6 +6,7 @@
     background-color: white;
 }
 body {
+    box-sizing: border-box;
     background-color: #D8BFD8;
 }
 .s2>div {
@@ -18,4 +19,8 @@ body {
 }
 .s2 {
     height: 500px;
+}
+#pantalla {
+    overflow: auto;
+    overflow-y: scroll;
 }

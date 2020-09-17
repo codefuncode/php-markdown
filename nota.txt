@@ -1,0 +1,4 @@
+sudo /opt/lampp/lampp start
+
+
+chmod -R 777 lampp/
